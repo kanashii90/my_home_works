@@ -172,8 +172,15 @@ th, td {
 
 footer {
     /* Стили для футера */
+        width: 1440px;
+        height: 70px;
+        background: rgba(163, 167, 255, 0.3);
+        padding-top: 26px;
 }
 
 .footer-link {
     /* Стили для футера */
+        font-weight: 400;
+        font-size: 14px;
+        color: #2965f1;
 }

@@ -5,7 +5,7 @@
 }
 
 .container {
-        outline: 1px solid red; /* чтобы контейнер был виден, в конце можно будет удалить это св-во */
+        /*outline: 1px solid red; !* чтобы контейнер был виден, в конце можно будет удалить это св-во *!*/
         margin: 0 auto;
         width: 100%;
         /* 📍 Максимальная ширина для контейнера */
@@ -87,22 +87,24 @@ select {
         background-image: url("../1-hw-with-auto-test-html-css-main/accets/img/ep_arrow-down.svg");
         background-repeat: no-repeat;
         background-position: right 12px top 50%;
+        margin-bottom: 60px;
 }
 
 select:hover,
 .text-field:hover {
         /* 📍 Стили для выпадающего списка и текстового поля при наведении курсора */
-        font-weight: 400;
-        font-size: 16px;
-        /* line-height: 19px; */
-        line-height: 1.21071;
-        color: #303030;
+        border-color: #2965F1;
+        background-color: rgba(255, 255, 255, 0);
+        cursor: pointer;
+
 }
 
 .info-wrapper {
         /* 📍 Свойство flexbox для расположения 2-х списков в ряд */
         display: flex;
         flex-direction: row;
+        margin-bottom: 79px;
+
 }
 
 .section-title {
@@ -120,7 +122,10 @@ select:hover,
 .books-list {
         /* 📍 Свойства flexbox для отступов между элементами в списках */
         display: flex;
+        flex-direction: column;
         gap: 16px;
+        justify-content: space-between;
+
 }
 
 
@@ -140,6 +145,7 @@ select:hover,
 .skills {
         /* 📍 Свойства flexbox для расположения элементов с классом .label */
         display: flex;
+        flex-direction: column;
         gap: 20px;
 }
 
@@ -187,6 +193,9 @@ form {
 
 .line {
         margin: 60px 0;
+        border: 1px solid rgba(48, 48, 48, 0.3);
+        width: 1140px;
+        height: 0px;
 }
 
 table {
@@ -213,8 +222,10 @@ footer {
         font-size: 14px;
         color: #2965f1;
         text-decoration: none;
+
 }
 
 .footer-link:hover {
         /* 📍 Стили для ссылки при наведении курсора */
+        text-decoration: underline;
 }

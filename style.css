@@ -9,7 +9,7 @@
         margin: 0 auto;
         width: 100%;
         /* 📍 Максимальная ширина для контейнера */
-        max-width: 1440px;
+        max-width: 1140px;
 }
 
 body {
@@ -73,8 +73,7 @@ header span {
 
 .about-section .wrapper {
         /* 📍 Свойствa flexbox для отступов между элементами select, .info-wrapper и .skills-wrapper  */
-
-        gap: 16px;
+        gap: 60px;
 }
 
 select {
@@ -114,13 +113,14 @@ select:hover,
 
 .frameworks,
 .books {
-        min-width: 50%;
+
 }
 
 .frameworks-list,
 .books-list {
         /* 📍 Свойства flexbox для отступов между элементами в списках */
         display: flex;
+        gap: 16px;
 }
 
 
@@ -134,11 +134,13 @@ select:hover,
 .skills-block {
         /* 📍 Свойства flexbox для расположения формы над элементами с классом .label */
         display: flex;
+        flex-direction: column-reverse;
 }
 
 .skills {
         /* 📍 Свойства flexbox для расположения элементов с классом .label */
         display: flex;
+        gap: 20px;
 }
 
 .books-list {
@@ -203,6 +205,7 @@ footer {
         background-color: rgba(163, 167, 255, 0.3);
         padding: 26px 0;
         /* 📍 Свойство для расположения ссылки горизонтально по центру */
+        text-align: center;
 }
 
 .footer-link {

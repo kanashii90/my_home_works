@@ -1,192 +1,217 @@
 * {
-    /* Свойства для сброса начальных стилей элементов */
-        padding: 0;
         margin: 0;
+        padding: 0;
         box-sizing: border-box;
 }
 
+.container {
+        outline: 1px solid red; /* чтобы контейнер был виден, в конце можно будет удалить это св-во */
+        margin: 0 auto;
+        width: 100%;
+        /* 📍 Максимальная ширина для контейнера */
+        max-width: 1440px;
+}
+
 body {
-        min-width:600px;
         font-family: "Inter", sans-serif;
         color: #303030;
 }
 
 header {
-    /* Стили для хедера */
-        width: 1440px;
-        height: 70px;
-        background: #2965f1;
-        padding-top: 23px;
-        padding-bottom: 23px;
+        background-color: #2965F1;
+        padding: 23px 0;
 }
 
 header span {
-    /* Стили для текста в хедере IT-INCUBATOR */
-        font-family: "Inter", sans-serif;
         font-weight: 700;
         font-size: 20px;
         color: #fff;
-        text-transform: uppercase;
-        display: flex;
-        justify-content: left;
-
-
 }
 
 .main-section {
-    /* Стили для первой секции */
-        width: 1440px;
-        min-height: 1024px;
-        background: #fafaff;
-        padding-top: 60px;
-        padding-bottom: 60px;
+        background-color: #fafaff;
+        padding: 60px 0;
+        min-height: 100vh;
+        /* 📍 Свойства flexbox для размещения container-a вертикально по центру */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+}
+
+.main-section .wrapper {
+        /* 📍 Свойствa flexbox для размещения блока с текстом и изображения в ряд, и центрирования их по вертикали */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+.text-wrapper {
+        /* 📍 Cвойство для ограничения ширины блока с текстом в первой секции */
+        max-width: 425px;
 }
 
 .main-title {
-    /* Стили для заголовка в первой секции */
         font-weight: 700;
         font-size: 48px;
         margin-bottom: 20px;
 }
 
 .main-text {
-    /* Стили для текста в первой секции */
         font-weight: 400;
         font-size: 18px;
 }
 
 .main-image {
-    /* Стили для изображения в первой секции */
         max-width: 715px;
-        height: 508px;
 }
 
-
 .about-section {
-    /* Стили для второй секции */
-        width: 1440px;
-        height: 883px;
-        background: #fff;
+        background-color: #fff;
         padding: 100px 0;
+}
 
+.about-section .wrapper {
+        /* 📍 Свойствa flexbox для отступов между элементами select, .info-wrapper и .skills-wrapper  */
+
+        gap: 16px;
 }
 
 select {
-    /* Стили для выпадающего списка */
-        width: 150px;
-        height: 36px;
-        background: url("../1-hw-with-auto-test-html-css-main/accets/img/ep_arrow-down.svg") right 10px top 50%;
-        appearance: none;
-        font-weight: 400;
-        font-size: 16px;
-        padding-left: 10px;
         border: 1px solid rgba(48, 48, 48, 0.3);
         border-radius: 5px;
-        background: rgba(255, 255, 255, 0);
-        background: no-repeat;
+        width: 150px;
+        padding: 8px 12px;
+        font-weight: 400;
+        font-size: 16px;
+        appearance: none;
+        background-image: url("../1-hw-with-auto-test-html-css-main/accets/img/ep_arrow-down.svg");
+        background-repeat: no-repeat;
+        background-position: right 12px top 50%;
+}
+
+select:hover,
+.text-field:hover {
+        /* 📍 Стили для выпадающего списка и текстового поля при наведении курсора */
+        font-weight: 400;
+        font-size: 16px;
+        /* line-height: 19px; */
+        line-height: 1.21071;
+        color: #303030;
+}
+
+.info-wrapper {
+        /* 📍 Свойство flexbox для расположения 2-х списков в ряд */
+        display: flex;
+        flex-direction: row;
 }
 
 .section-title {
-    /* Стили для заголовков во второй секции */
         font-weight: 700;
         font-size: 24px;
         margin-bottom: 25px;
 }
 
-.frameworks-list {
-    /* Стили для маркированного списка во второй секции */
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
-        flex-direction: column;
-        gap: 0;
-        list-style-image: url("../1-hw-with-auto-test-html-css-main/accets/img/solar_map-arrow-up-bold.svg");
-        padding: 0 20px;
+.frameworks,
+.books {
+        min-width: 50%;
+}
 
+.frameworks-list,
+.books-list {
+        /* 📍 Свойства flexbox для отступов между элементами в списках */
+        display: flex;
+}
+
+
+.frameworks-list {
+        font-weight: 400;
+        font-size: 16px;
+        list-style-image: url(./accets/img/solar_map-arrow-up-bold.svg);
+        padding-left: 20px;
+}
+
+.skills-block {
+        /* 📍 Свойства flexbox для расположения формы над элементами с классом .label */
+        display: flex;
+}
+
+.skills {
+        /* 📍 Свойства flexbox для расположения элементов с классом .label */
+        display: flex;
 }
 
 .books-list {
-    /* Стили для нумерованного списка во второй секции */
         font-weight: 400;
         font-size: 16px;
-        padding: 0 20px;
+        padding-left: 20px;
 }
 
 .label {
-    /* Стили для подписей чекбоксов */
         font-weight: 400;
         font-size: 16px;
-        padding-left: 6px;
+}
 
+form {
+        margin-bottom: 40px;
 }
 
 .text-field {
-    /* Стили для односточного поля ввода текста */
         border: 1px solid rgba(48, 48, 48, 0.3);
         border-radius: 5px;
-        width: 330px;
+        max-width: 330px;
+        width: 100%;
         height: 36px;
-        background: rgba(255, 255, 255, 0);
-        padding-left: 12px;
-        margin-right: 8px;
+        background-color: rgba(255, 255, 255, 0);
+        padding: 8px 12px;
+        font-weight: 400;
         font-size: 16px;
 }
 
 .btn {
-    /* Стили для кнопки */
+        border: none;
+        border-radius: 5px;
         width: 125px;
         height: 36px;
+        background-color: #2965f1;
         font-weight: 700;
         font-size: 14px;
         color: #fff;
-        border-radius: 5px;
-        background: #2965f1;
-        margin-bottom: 60px;
-        border: none;
+}
 
+.btn:hover {
+        /* 📍 Стили для кнопки при наведении курсора */
 }
 
 .line {
-    /* Стили для линии */
-        border: 1px solid rgba(48, 48, 48, 0.3);
-        width: 1440px;
-        height: 0;
         margin: 60px 0;
 }
 
 table {
-    /* Стили для таблицы */
-        font-weight: 400;
         border: 1px solid #95a1bb;
         border-collapse: collapse;
-        width: 300px;
-        height: 196px;
+        font-weight: 400;
         font-size: 14px;
-
+        margin: 0 auto;
 }
 
 th, td {
-    /* Стили для ячеек таблицы */
         padding: 12px 15px;
-        border: 1px solid #95a1bb;
-        text-align: left;
-
-
-
 }
 
 footer {
-    /* Стили для футера */
-        width: 1440px;
-        height: 70px;
-        background: rgba(163, 167, 255, 0.3);
+        background-color: rgba(163, 167, 255, 0.3);
         padding: 26px 0;
+        /* 📍 Свойство для расположения ссылки горизонтально по центру */
 }
 
 .footer-link {
-    /* Стили для футера */
         font-weight: 400;
         font-size: 14px;
         color: #2965f1;
         text-decoration: none;
+}
+
+.footer-link:hover {
+        /* 📍 Стили для ссылки при наведении курсора */
 }
